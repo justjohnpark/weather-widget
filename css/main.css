@@ -1,0 +1,104 @@
+#container {
+  font-family: "verb", "Helvetica Neue" , "Helvetica" , Helvetica , Arial , sans-serif; 
+  margin: 0 auto;
+  width: 720px;
+  height: 450px;
+}
+
+#meta {
+  margin: 0 auto;
+  width: 720px;
+  height: 40px;
+  border-bottom: 1px solid;
+}
+
+#location {
+  display: inline-block;
+  float: left;
+  font-size: 2em;
+}
+
+#current-date {
+  display: inline-block;
+  float: right;
+  padding-top: 3%;
+  font-size: 0.75em;
+}
+
+#top {
+  margin: 0 auto;
+  width: 720px;
+  height: 165px;
+  border-bottom: 1px solid;
+}
+
+#left {
+  display: inline-block;
+  float: left;
+  width: 60%;
+  margin: auto;
+  /*border-right: 1px solid;*/
+}
+
+#left-left {
+  display: inline-block;
+  float: left;
+  margin: auto;
+  padding-left: 15%;
+}
+
+#current-image {
+  height: 110%;
+  width: 110%;
+}
+
+#left-right {
+  display: inline-block;
+  float: right;
+  margin: auto;
+  padding-right: 15%;
+  padding-top: 10%;
+  overflow: auto;
+}
+
+#current-temp {
+  font-size: 2.5em;
+}
+
+.left-right-color {
+  color: #fd843b;
+}
+
+#right {
+  display: inline-block;
+  float: right;
+  width: 40%;
+  margin: auto;
+  font-size: 0.75em;
+}
+
+#bottom {
+  margin: 0 auto;
+  width: 720px;
+  height: 300px;
+  font-size: 0.75em;
+  padding-left: 15%;
+}
+
+#day-one {
+  display: inline-block;
+  float: left;
+  width: 33%;
+}
+
+#day-two {
+  display: inline-block;
+  float: left;
+  width: 33%;
+}
+
+#day-three {
+  display: inline-block;
+  float: left;
+  width: 33%;
+}

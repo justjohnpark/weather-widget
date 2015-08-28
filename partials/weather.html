@@ -1,1 +1,59 @@
-{{4}}
+<div ng-if="vmMain.WeatherFactory.showConditions && vmMain.WeatherFactory.showForecast">
+  <div id="container">
+    <div id="meta">
+      <div id="location">{{vmMain.WeatherFactory.conditions["city"]}}, {{vmMain.WeatherFactory.conditions["state"]}}</div>
+      <div id="current-date">{{vmMain.WeatherFactory.conditions["currentDate"]}}</div>
+    </div>
+
+    <div id="top">
+      <!-- Left Half of Panel -->
+      <div id="left">
+        <div id="left-left">
+          <img ng-src="{{vmMain.WeatherFactory.conditions['imageURLCurrent']}}" alt="Current Condition Icon" id="current-image"></img>
+          <div id="current-description">{{vmMain.WeatherFactory.conditions["currentWeatherDesc"]}}</div>
+        </div>
+        <div id="left-right">
+          <div class="left-right-color" id="current-temp">{{vmMain.WeatherFactory.conditions["currentTemp"]}}°F</div>
+          Feels like <span class="left-right-color">{{vmMain.WeatherFactory.conditions["feelsLike"]}}°F</span>
+        </div>
+      </div>
+
+      <!-- Right Half of Panel -->
+      <div id="right">
+        <p>Wind: {{vmMain.WeatherFactory.conditions["wind"]}}</p>
+        <p>Pressure: {{vmMain.WeatherFactory.conditions["pressure"]}} in</p>
+        <p>Visibility: {{vmMain.WeatherFactory.conditions["visibility"]}}</p>
+        <p>Heat Index: {{vmMain.WeatherFactory.conditions["heatIndex"]}}°F</p>
+        <p>Dew Point: {{vmMain.WeatherFactory.conditions["dewPoint"]}}°F</p>
+        <p>Humidity: {{vmMain.WeatherFactory.conditions["humidity"]}}</p>
+      </div>
+    </div>
+
+    <div id="bottom">
+      <div id="day-one">
+        <span id="day-one-date">{{vmMain.WeatherFactory.forecast["dayOneDate"]}}</span><br>
+        {{vmMain.WeatherFactory.forecast["dayOneHigh"]}}°F | {{vmMain.WeatherFactory.forecast["dayOneLow"]}}°F<br>
+        <img ng-src="{{vmMain.WeatherFactory.forecast['imageURLDayOne']}}" alt="Day One Icon" id="day-one-image"></img><br>
+        {{vmMain.WeatherFactory.forecast["dayOneCondition"]}}
+      </div>
+
+      <div id="day-two">
+        <span id="day-two-date">{{vmMain.WeatherFactory.forecast["dayTwoDate"]}}</span><br>
+        {{vmMain.WeatherFactory.forecast["dayTwoHigh"]}}°F | {{vmMain.WeatherFactory.forecast["dayTwoLow"]}}°F<br>
+        <img ng-src="{{vmMain.WeatherFactory.forecast['imageURLDayTwo']}}" alt="Day Two Icon" id="day-two-image"></img><br>
+        {{vmMain.WeatherFactory.forecast["dayTwoCondition"]}}
+      </div>
+
+      <div id="day-three">
+        <span id="day-three-date">{{vmMain.WeatherFactory.forecast["dayThreeDate"]}} </span><br>
+        {{vmMain.WeatherFactory.forecast["dayThreeHigh"]}}°F | {{vmMain.WeatherFactory.forecast["dayThreeLow"]}}°F<br>
+        <img ng-src="{{vmMain.WeatherFactory.forecast['imageURLDayThree']}}" alt="Day Three Icon" id="day-three-image"></img><br>
+        {{vmMain.WeatherFactory.forecast["dayThreeCondition"]}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ng-if="!vmMain.WeatherFactory.showConditions && !vmMain.WeatherFactory.showForecast">
+  <p>There was a problem fetching data from the Wunderground API</p>
+</div>
